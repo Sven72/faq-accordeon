@@ -2,36 +2,14 @@
 
 // https://medium.com/@vikash20186/creating-accordion-with-javascript-a33743655474
 
-// let questionTab = document.querySelectorAll("#question");
+var acc = document.getElementsByClassName("main-question");
+var i;
 
-// for (var i = 0; i < questionTab.length; i++) {
-//   questionTab[i].addEventListener("click", () => {
-//     console.log(parentElement);
-//   });
-// }
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    // this.nextElementSibling.classList.toggle("show");
+  };
 
-var accordionElem = document.getElementById("accordion");
-
-function initAccordion(accordionElem) {
-  function handlePanelClick(event) {
-    showPanel(event.currentTarget);
-  }
-
-  function showPanel(panel) {
-    //Hide current one. First time it will be null.
-    var expandedPanel = accordionElem.querySelector(".active");
-    if (expandedPanel) {
-      expandedPanel.classList.remove("active");
-    } //Show new one
-    panel.classList.add("active");
-  }
-  var allPanelElems = accordionElem.querySelectorAll(".panel");
-  for (var i = 0, len = allPanelElems.length; i < len; i++) {
-    allPanelElems[i].addEventListener("click", handlePanelClick);
-  } //By Default Show first panel
-  showPanel(allPanelElems[0]);
+  console.log("klicked " + i);
 }
-
-initAccordion(accordionElem);
-
-console.log(document.getElementById("accordion"));
