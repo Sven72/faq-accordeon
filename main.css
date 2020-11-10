@@ -7,11 +7,9 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  background-image: linear-gradient(
-    to bottom,
-    var(--bg-soft-violet),
-    var(--bg-soft-blue)
-  );
+  background-image: linear-gradient(to bottom,
+      var(--bg-soft-violet),
+      var(--bg-soft-blue));
   background-repeat: no-repeat;
   height: 100vh;
   padding: 7em 1em;
@@ -51,6 +49,7 @@ body {
 
 .main-answer {
   display: none;
+  /* visibility: hidden; */
 }
 
 .active {
@@ -68,4 +67,8 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+summary {
+  color: white;
 }
