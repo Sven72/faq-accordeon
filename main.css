@@ -12,9 +12,11 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  background-image: linear-gradient(to bottom,
-      var(--bg-soft-violet),
-      var(--bg-soft-blue));
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-soft-violet),
+    var(--bg-soft-blue)
+  );
   background-repeat: no-repeat;
   height: 100vh;
   padding: 7em 1em;
@@ -23,23 +25,22 @@ body {
 .main {
   background-color: #fff;
   border-radius: 30px;
-  height: 30vh;
-  padding: 9em 1em;
+  padding: 9em 1em 5em;
   margin-top: 20%;
 }
 
 .main-accordion {
   color: var(--dark-grayish-blue);
+  font-size: 1.2rem;
 }
 
 .main-image img {
-  repeat: no-repeat;
+  display: block;
+  margin: -18em auto 5em;
 }
 
-.main-image {
-  position: absolute;
-  /* margin-top: -200px; */
-  margin: -100px auto;
+.test {
+  margin: -12em auto 4em !important;
 }
 
 .main-headline {
@@ -51,10 +52,15 @@ body {
 .main-question {
   display: flex;
   justify-content: space-between;
+  padding: 0 1em 0 1em;
 }
 
 .main-question svg {
   align-self: center;
+}
+
+.turn-svg {
+  transform: rotate(180deg);
 }
 
 .main-question img {
@@ -64,15 +70,12 @@ body {
 
 .main-answer {
   display: none;
-<<<<<<< HEAD
-  /* visibility: hidden; */
-=======
   color: var(--dark-grayish-blue);
   line-height: 1.4em;
   width: 90%;
->>>>>>> accordion
+  margin-top: -20px;
+  padding: 0 1em 0 1em;
 }
-
 .active {
   display: block;
 }
@@ -83,7 +86,7 @@ body {
 
 .highlight {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .attribution {
